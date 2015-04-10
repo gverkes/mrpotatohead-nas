@@ -1,8 +1,9 @@
 package nl.mprog.apps.mrpotatohead;
-
 /**
  * Created by Govert on 4/8/15.
+ * ViewPagerFragment, Used for Accesoires Features fragement
  */
+
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;

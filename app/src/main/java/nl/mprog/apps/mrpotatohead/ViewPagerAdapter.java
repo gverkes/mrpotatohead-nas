@@ -1,4 +1,8 @@
 package nl.mprog.apps.mrpotatohead;
+/**
+ * Created by Govert on 4/8/15.
+ * ViewPager, used for the paging of different features categories.
+ */
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

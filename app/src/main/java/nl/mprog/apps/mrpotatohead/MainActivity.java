@@ -1,4 +1,8 @@
 package nl.mprog.apps.mrpotatohead;
+/**
+ * Created by Govert on 4/8/15.
+ * Mr. Potatohead, Main Activity
+ */
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
@@ -31,12 +35,13 @@ public class MainActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Locate the viewpager in activity_main.xml
+        // Locate the ViewPager in activity_main.xml
         ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
 
         // Set the ViewPagerAdapter into ViewPager
         viewPager.setAdapter(new ViewPagerAdapter(getSupportFragmentManager()));
 
+        // Initialize all ImageViews objects
         for (int i = 0; i < NO_OF_FEATURES; i++) {
             imgFeatures[i] = (ImageView) findViewById(IDS_IMG_FEATURES[i]);
         }
@@ -45,6 +50,7 @@ public class MainActivity extends FragmentActivity {
 
     public void itemClicked(View v) {
 
+        // Check which CheckBox is clicked and change visibility of corresponding ImageView
         for (int i = 0; i < NO_OF_FEATURES; i++) {
             if (v.getId() == IDS_CHK_FEATURES[i]) {
                 if (((CheckBox) v).isChecked()) {
